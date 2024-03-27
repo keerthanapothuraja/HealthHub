@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disability Information Form</title>
+    <style>
+         body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color:#204651;
+        }
+
+
+        h1 {
+            color:black;
+            background-color: #d6e3e7;
+            opacity:0.8;
+            text-align: center;
+            padding:20px;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #results {
+            margin-top: 20px;
+        }
+        .align {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin: 0;
+        }
+
+        .left, .right {
+            width: 48%;
+        }
+        nav a:hover {
+            background-color:white;
+            color:white;
+        }
+        nav a{
+            text-decoration:none;
+        }
+        p{
+            background-color:black;
+            color:white;
+            border: none;
+            cursor: pointer;
+            width:120px;
+            height:40px;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Disability Information Form</h1>
+<div class="align">
+<div class="left">
+<main>
+    <label for="state">Select your state:</label>
+    <select id="state" name="state">
+        <option>Assam</option>
+        <option>Andhaman and nicobar island</option>
+        <option>Arunachal pradesh</option>
+        <option>Andrapradesh</option>
+        <option>Bihar</option>
+        <option>Chhattisgarh</option>
+        <option>Goa</option>	
+        <option>Gujarat</option>	
+        <option>Haryana</option>
+        <option>Himachal Pradesh</option>
+        <option>Jharkhand</option>
+        <option>Karnataka</option>
+        <option>Kerala</option>
+        <option>Madhya Pradesh</option>
+        <option>Maharastra</option>
+        <option>Manipur</option>
+        <option>Mizoram</option>
+        <option>Nagaland</option>
+        <option>Odisha</option>
+        <option>Punjab</option>
+        <option>Rajasthan</option>
+        <option>Sikkim</option>
+        <option>Tamil Nadu</option>
+        <option>Telangana</option>
+        <option>Tripura</option>
+        <option>Uttar Pradesh</option>
+        <option>Gairsain</option>	
+        <option>West Bengal</option>		
+    </select>
+    <button onclick="displayResults()">Submit</button>
+</main>
+</div>
+<div class="right">
+<img src="C:\Users\keert\Downloads\scheme1.jpg"/>
+</div>
+</div>
+<div class="links">
+<NAV>
+<table align="center">
+    <tr>
+    <th><a href="v1.html"><p>vision Impairment</p></a></th>
+    <th><a href="H1.HTML"><p>Deaf or hard of hearing</p></a></th>
+    <th><a HREF="#"><p>mental health conditions</p></a></th>
+    <th><a href="#"><p>intellectual disability</p></a></th>
+    <th><a href="#"><p>acquired brain injury</p></a></th>
+    <th><a href="#"><p>autism spectrum disorder</p></a></th>
+    <th><a href="m1.html"><p>physical disability</p></a></th>
+    </tr>
+</table>
+</NAV>
+</div>
+<script>
+    function displayResults() {
+        var state = document.getElementById('state').value;
+        var resultsElement = document.getElementById('results');
+
+        resultsElement.innerHTML = '<h2>Results</h2>' +
+            '<p><strong>State:</strong> ' + state + '</p>' ;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #204651;
+            color: white;
+        }
+
+        .title {
+            color: black;
+            background-color: #d6e3e7;
+            opacity: 0.8;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #204651;
+            padding: 10px 0;
+        }
+
+        nav a {
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: black;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .align {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .left, .right {
+            width: 48%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            opacity: 0.8;
+            border-radius: 10px;
+        }
+
+        p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+        }
+
+        .column {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .problem1 {
+            width: 48%;
+            margin-bottom: 20px;
+            background-color: white;
+            opacity: 0.8;
+            border-radius: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">AbleSpeakHub</h1>
+    <nav>
+        <a href="#" onclick="showContent('home')"><p>Home</p></a>
+        <a href="#" onclick="showContent('jobs')"><p>Job roles</p></a>
+        <a href="#" onclick="showContent('diets')"><p>Diet plans</p></a>
+        <a href="#" onclick="showContent('guide')"><p>Guide</p></a>
+        <a href="#" onclick="showContent('scheme')"><p>Scheme</p></a>
+    </nav>
+
+    <main>
+        <h2>Struggling with Learning Disabilities....</h2>
+        <div class="align">
+            <div class="left">
+                <img src="C:\Users\keert\Downloads\doctors.jpg" alt="Doctor Image">
+            </div>
+            <div class="right">
+                <p>Learning disabilities and spectrum disorders are extremely bright and above average in some areas, but struggle with academic abilities, sensory regulation, social interaction, and impulsivity control. There is usually a weakness in an area or areas of the brain that are causing the disruption of processing. This contributes to Learning Disabilities and a range of disorders.</p>
+                <h2>Become a Volunteer or Help The Event...</h2>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="problem1">
+                Physically challenged individuals often struggle to navigate through the various government schemes available to them due to lack of awareness or accessibility issues.
+            </div>
+
+            <div class="problem1">
+                Physically challenged individuals may face limitations in accessing traditional skill development opportunities or participating in community activities.
+            </div>
+
+            <div class="problem1">
+                Physically challenged individuals often feel isolated and struggle to find a supportive community where they can share their experiences and challenges.
+            </div>
+
+            <div class="problem1">
+                Many individuals with physical challenges struggle to find accessible fitness and wellness resources that cater to their specific needs and abilities. They may feel excluded from mainstream fitness programs and lack guidance on how to maintain their health and well-being.
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showContent(section) {
+            var contentElement = document.getElementById('content');
+
+            switch (section) {
+                case 'home':
+                    contentElement.innerHTML = '<h2>Welcome to the Home Page</h2><p>This is the default content that appears when the page loads.</p>';
+                    break;
+                case 'jobs':
+                    contentElement.innerHTML = '<h2>Contact Information</h2><p>You can reach us at example@example.com.</p>';
+                    break;
+                case 'diets':
+                    contentElement.innerHTML = '<h2>Information</h2><p>This is some information about the website.</p>';
+                    break;
+                case 'guide':
+                    contentElement.innerHTML = '<h2>Guide</h2><p>This is a guide to using the website.</p>';
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

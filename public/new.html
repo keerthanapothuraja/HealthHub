@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disability Information Form</title>
+    <style>
+         body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color:#204651;
+        }
+
+        h1 {
+            color:black;
+            background-color: #d6e3e7;
+            opacity:0.8;
+            text-align: center;
+            padding:20px;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #results {
+            margin-top: 20px;
+        }
+        .align {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin: 0;
+        }
+
+        .left, .right {
+            width: 48%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Disability Information Form</h1>
+<div class="align">
+<div class="left">
+<main>
+    <label for="state">Select your state:</label>
+    <select id="state" name="state">
+        <!-- ... (unchanged) ... -->
+    </select>
+
+    <label for="disabilityType">Select your type of disability:</label>
+    <select id="disabilityType" name="disabilityType">
+       <option value="Visual Impairment(1.).docx"><a href="Visual Impairement(1.).docx">Vision Impairment</a></option>
+       <option value="Deaf or hard of hearing.docx">Deaf or Hard of Hearing</option>
+       <option value="Mental Health Conditions.docx">Mental Health Conditions</option>
+       <option value="Intellectual Disability.docx">Intellectual Disability</option>
+       <option value="Acquired Brain Injury.docx">Acquired Brain Injury</option>
+       <option value="Autism Spectrum Disorder.docx">Autism Spectrum Disorder</option>
+       <option value="Physical Disability.docx">Physical Disability</option>
+        <!-- Add more disability types as needed -->
+    </select>
+
+    <button onclick="displayResults()">Submit</button>
+
+    <div id="results"></div>
+</main>
+</div>
+<div class="right">
+<img src="C:\Users\keert\Downloads\scheme1.jpg"/>
+</div>
+</div>
+
+<script>
+    function displayResults() {
+        var state = document.getElementById('state').value;
+        var disabilityType = document.getElementById('disabilityType').value;
+        var resultsElement = document.getElementById('results');
+
+        resultsElement.innerHTML = '<h2>Results</h2>' +
+            '<p><strong>State:</strong> ' + state + '</p>' +
+            '<p><strong>Disability Type:</strong> ' + disabilityType + '</p>' +
+            '<p><strong>Document:</strong> <a href="E:\\path\\to\\your\\documents\\' + disabilityType + '" target="_blank">Open/Download Document</a></p>';
+    }
+</script>
+
+</body>
+</html>

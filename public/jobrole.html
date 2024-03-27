@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company HR Portal</title>
+    <style>
+        body {
+            font-family: "Courier New", Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color:#204651;
+        }
+
+        header {
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color:lavender;
+            padding: 20px;
+            border-radius: 8px;
+            opacity: 0.8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color:white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+        .align{
+            column-count: 2;
+            column-gap: 10%;
+        }
+        h1{
+            color:black;
+           font-size: 4em;
+          font-weight: 200;
+          background-color: #d6e3e7;
+          opacity: 0.8;
+          padding: 2px;
+        }
+        .right{
+            text-align: right;
+            width: 50%; 
+        }
+        .left{
+            text-align: left;
+            width: 50%;
+        }
+        p{
+            font-size: 150%;
+            font-weight: bold;
+        }
+        .border{
+            background-color:#b99470c2;
+            padding: 2%;
+            border-radius: 10px;
+            opacity:0.8;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Company Portal</h1>
+</header>
+
+<main>
+    <div class="align">
+
+    <form id="employeeForm">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+        <label for="jobRole">Preferred Job Role:</label>
+        <select id="jobRole" name="jobRole">
+            <option value="Caretaker">Caretaker</option>
+            <option value="Childcare provider">Childcare provider</option>
+            <option value="Nanny">Nanny</option>
+            <!-- Add more job roles as needed -->
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+    <div class="border">
+    <p>Role overview</p>
+    <ul>
+        <li><p>Supporting people with social and physical activities as well as basics such as eating and drinking</p></li>
+        <li><p>and accompanying people at appointments</p></li>
+        <li><p>with personal care<p></li>
+        <li><p>Monitoring individuals’ conditions by taking their temperature, pulse, respiration and weight, and possibly helping with medication.</p></li>
+        </ul>
+    </div>
+    </div>
+    <div class="align">
+    <div align="left">
+    <p style="color:white">"Several unanticipated challenges can manifest when caring for properties, which can require caretakers to be adept at solving problems.
+        .....They may also interact with vendors and service providers to maintain, install and upgrade existing machines on the property. 
+        .....Having negotiation skills can help them secure these services at a cost-effective price."</p>
+        <br><br>
+    </div>
+    <div>
+        <br><br>
+    <img src="C:\Users\keert\Downloads\care2.jpg" widht="400" height="300"/>
+    </div>
+    </div>
+
+</main>
+
+<script>
+    document.getElementById('employeeForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        // Handle form submission here (e.g., send data to server)
+        alert('Form submitted successfully!');
+        // You may want to redirect the user or perform other actions after submission.
+    });
+</script>
+
+</body>
+</html>
